@@ -1,0 +1,16 @@
+laravel new *project name*
+
+php artisan serve
+php artisan migrate
+php artisan migrate:refresh
+php artisan make:(view/controller/middleware/model/seeder/migration/etc) *name*
+php artisan db:seed
+
+php artisan ui bootstrap --*auth folders name*
+npm install
+npm run dev
+
+composer install *something*
+composer update *something*
+composer require *something*
+
