@@ -20,6 +20,10 @@ Route::get('/user1/{id}', function($id){
     return "Something $id";
 });
 
+Route::get('/home2', function(){
+    return view('layouts.profile');
+});
+
 Route::get('/user/{id}', [UserController::class, 'getUser']);
 Route::get('/course', [CourseController::class, 'index']);
 Route::get('/course/{id}', [CourseController::class, 'findCourse'])->middleware('CheckHeaders');
