@@ -7,6 +7,9 @@ use App\Http\Controllers\CourseController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('unauth', function () {
+    return view('unauth');
+});
 
 // Route::get('/user', function(){
 //     return view ('user');
@@ -18,4 +21,4 @@ Route::get('/user1/{id}', function($id){
 
 Route::get('/user/{id}', [UserController::class, 'getUser']);
 Route::get('/course', [CourseController::class, 'index']);
-Route::get('/course/{id}', [CourseController::class, 'findCourse']);
+Route::get('/course/{id}', [CourseController::class, 'findCourse'])->middleware('CheckHeaders');
