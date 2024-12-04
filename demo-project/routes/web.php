@@ -24,9 +24,12 @@ Route::get('/home2', function(){
     return view('layouts.profile');
 });
 
+Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'getUser']);
+
 Route::get('/course', [CourseController::class, 'index']);
 Route::get('/course/{id}', [CourseController::class, 'findCourse'])->middleware('CheckHeaders');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
